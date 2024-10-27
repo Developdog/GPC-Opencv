@@ -1,9 +1,8 @@
 import cv2
-from cvzone.FaceMeshModule import FaceMeshDetector as fmd
+from cvzone.FaceMeshModule import FaceMeshDetector as fmd # FaceMeshDetector 클래스 불러오기
 
 cap = cv2.VideoCapture(0)
-detector = fmd(maxFaces=1, minDetectionCon=0.75)
-count = 0
+detector = fmd(maxFaces=1, minDetectionCon=0.75) # FaceMeshDetector 객체 생성
 
 while cap.isOpened : # 카메라가 연결되었을 경우
     ret, img = cap.read() # 카메라로부터 이미지를 읽어옴
